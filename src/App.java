@@ -2,8 +2,10 @@ public class App {
 
     /* Create Model For To Do List Data */
     public static String[] model = new String[10];
+    public static java.util.Scanner scanner = new java.util.Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
+        testInput();
     }
 
     /*
@@ -96,6 +98,21 @@ public class App {
 
         var result = removeTodoList(2);
         System.out.println(result);
+    }
+
+    public static String input(String info) {
+        System.out.print(info + " : ");
+
+        String data = scanner.nextLine();
+        return data;
+    }
+
+    public static void testInput() {
+        var name = input("Nama");
+        System.out.println("Hi " + name);
+
+        var channel = input("Channel");
+        System.out.println(channel);
     }
 
     /*
