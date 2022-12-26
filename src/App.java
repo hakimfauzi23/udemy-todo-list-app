@@ -30,8 +30,41 @@ public class App {
     /*
      * Add ToDo List
      */
-    public static void addTodoList() {
+    public static void addTodoList(String todo) {
 
+        // Check if model is full, if it's full resize the array.
+        var isFull = true;
+        for (int i = 0; i < model.length; i++) {
+            if (model[i] == null) {
+                isFull = false;
+                break;
+            }
+        }
+
+        if (isFull) {
+            var temp = model;
+
+            // If The Array is resized, then all the element is gone!
+            model = new String[model.length * 2];
+
+            for (var i = 0; i < temp.length; i++) {
+                model[i] = temp[i];
+            }
+        }
+
+        // Add to Null Array Element
+        for (var i = 0; i < model.length; i++) {
+            if (model[i] == null) {
+                model[i] = todo;
+                break;
+            }
+        }
+    }
+
+    public static void testAddTodoList() {
+        for (int i = 0; i < 25; i++) {
+            addTodoList("Cpntoh to do Ke. " + i);
+        }
     }
 
     /*
