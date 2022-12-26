@@ -5,13 +5,14 @@ public class App {
     public static java.util.Scanner scanner = new java.util.Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
-        testInput();
+        testViewShowTodoList();
     }
 
     /*
      * Show ToDo List
      */
     public static void showTodoList() {
+        System.out.println("TO DO LIST!");
         for (var i = 0; i < model.length; i++) {
             var todo = model[i];
             var number = i + 1;
@@ -119,7 +120,36 @@ public class App {
      * Show ToDo List Interface
      */
     public static void viewShowTodoList() {
+        while (true) {
+            showTodoList();
 
+            System.out.println("MENU");
+            System.out.println("1. Add");
+            System.out.println("2. Delete");
+            System.out.println("x. Exit");
+
+            var input = input("Choose Menu");
+            if (input.equals("1")) {
+                viewAddTodoList();
+            } else if (input.equals("2")) {
+                viewRemoveTodoList();
+            } else if (input.equals("x")) {
+                break;
+            } else {
+                System.out.println("Invalid Menu!");
+            }
+
+        }
+    }
+
+    public static void testViewShowTodoList() {
+        addTodoList("Satu");
+        addTodoList("Dua");
+        addTodoList("Tiga");
+        addTodoList("Empat");
+        addTodoList("Lima");
+
+        viewShowTodoList();
     }
 
     /*
