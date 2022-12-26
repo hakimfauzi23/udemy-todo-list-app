@@ -4,14 +4,27 @@ public class App {
     public static String[] model = new String[10];
 
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
     }
 
     /*
      * Show ToDo List
      */
     public static void showTodoList() {
+        for (var i = 0; i < model.length; i++) {
+            var todo = model[i];
+            var number = i + 1;
 
+            if (todo != null) {
+                System.out.println(number + ". " + todo);
+            }
+        }
+    }
+
+    public static void testShowTodoList() {
+        model[0] = "Learn New Programming Lang";
+        model[1] = "Build To Do List App";
+
+        showTodoList();
     }
 
     /*
