@@ -5,7 +5,7 @@ public class App {
     public static java.util.Scanner scanner = new java.util.Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
-        testViewShowTodoList();
+        testViewAddTodoList();
     }
 
     /*
@@ -156,7 +156,26 @@ public class App {
      * Show Add ToDo List Interface
      */
     public static void viewAddTodoList() {
+        System.out.println("ADD TO DO LIST");
 
+        var todo = input("Todo ( Press [x] to exit)");
+
+        if (todo.equals("x")) {
+
+        } else {
+            addTodoList(todo);
+        }
+    }
+
+    public static void testViewAddTodoList() {
+        addTodoList("Satu");
+        addTodoList("Dua");
+        addTodoList("Tiga");
+        addTodoList("Tiga");
+
+        viewAddTodoList();
+
+        showTodoList();
     }
 
     /*
