@@ -27,4 +27,25 @@ public class App {
     public static void removeTodoList() {
 
     }
+
+    /*
+     * Show ToDo List Interface
+     */
+    public static void viewShowTodoList() {
+
+    }
+
+    /*
+     * Show Add ToDo List Interface
+     */
+    public static void viewAddTodoList() {
+
+    }
+
+    /*
+     * Show Removal ToDo List Interface
+     */
+    public static void viewRemoveTodoList() {
+
+    }
 }
