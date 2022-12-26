@@ -5,7 +5,8 @@ public class App {
     public static java.util.Scanner scanner = new java.util.Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
-        testViewRemoveTodoList();
+        viewShowTodoList();
+
     }
 
     /*
@@ -182,6 +183,7 @@ public class App {
      * Show Removal ToDo List Interface
      */
     public static void viewRemoveTodoList() {
+        showTodoList();
         System.out.println("DELETE A TO DO LIST!");
 
         var number = input("Choose To Do List number, press [x] to cancel");
@@ -193,6 +195,7 @@ public class App {
                 System.out.println("Failed delete todolist : " + number);
             }
         }
+        showTodoList();
 
     }
 
@@ -201,7 +204,7 @@ public class App {
         addTodoList("Dua");
         addTodoList("Tiga");
         addTodoList("Empat");
-        
+
         showTodoList();
 
         viewRemoveTodoList();
