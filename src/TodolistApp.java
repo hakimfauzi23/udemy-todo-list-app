@@ -1,4 +1,4 @@
-public class App {
+public class TodolistApp {
 
     /* Create Model For To Do List Data */
     public static String[] model = new String[10];
