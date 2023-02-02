@@ -10,7 +10,8 @@ public class TodoListServiceTest {
 
     public static void main(String[] args) {
 //        testShowTodoList();
-        testAddTodoList();
+//        testAddTodoList();
+        testRemoveTodoList();
     }
 
     public static void testShowTodoList() {
@@ -34,5 +35,23 @@ public class TodoListServiceTest {
         todoListService.addTodoList("Learning Standard Classes Java [From Add]");
 
         todoListService.showTodoList();
+    }
+
+    public static void testRemoveTodoList(){
+        TodoListRepository todoListRepository = new TodoListRepositoryImplementation();
+        TodoListService todoListService = new TodoListServiceImplementation(todoListRepository);
+
+        todoListService.addTodoList("Learning Basic Java [From Remove Test]");
+        todoListService.addTodoList("Learning OOP Java [From Remove Test]");
+        todoListService.addTodoList("Learning Standard Classes Java [From Remove Test]");
+
+        todoListService.showTodoList();
+
+        todoListService.removeTodoList(3);
+        todoListService.removeTodoList(9);
+        todoListService.removeTodoList(1);
+
+        todoListService.showTodoList();
+
     }
 }
