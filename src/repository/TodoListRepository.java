@@ -2,7 +2,7 @@ package repository;
 
 import entity.Todolist;
 
-public interface TodolistRepository {
+public interface TodoListRepository {
 
     Todolist[] getAll();
 
