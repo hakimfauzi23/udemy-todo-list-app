@@ -48,6 +48,14 @@ public class TodoListView {
     }
 
     public void  removeTodoList(){
+        System.out.println("DELETE A TO DO LIST!");
+
+        var number = InputUtil.input("Choose To Do List number, press [x] to cancel");
+        if (number.equals("x")) {
+            
+        } else {
+            todoListService.removeTodoList(Integer.valueOf(number));
+        }
 
     }
 }
