@@ -36,7 +36,15 @@ public class TodoListView {
     }
 
     public void addTodoList(){
+        System.out.println("ADD TO DO LIST");
 
+        var todo = InputUtil.input("Todo ( Press [x] to exit)");
+
+        if (todo.equals("x") ) {
+
+        } else {
+            todoListService.addTodoList(todo);
+        }
     }
 
     public void  removeTodoList(){
